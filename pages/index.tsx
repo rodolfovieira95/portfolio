@@ -4,6 +4,8 @@ import { Container } from "../src/components/Container";
 import Rodolfo from "../src/assets/rodolfo-vieira-picture.webp";
 import Image from "next/image";
 import { Header } from "../src/components/Header";
+import { Main } from "../src/components/Main";
+import { CompaniesBar } from "../src/components/CompaniesBar";
 
 const Home: NextPage = () => {
   return (
@@ -16,19 +18,30 @@ const Home: NextPage = () => {
 
       <Header />
 
-      <main>
-        <Image
-          src={Rodolfo}
-          alt="Picture of Rodolfo Vieira. An white man with dark brown short hair, smiling and wearing a blue shirt."
-        />
-        <h1>Rodolfo Vieira</h1>
+      <Main>
+        <div style={{ marginBottom: "-88px" }}>
+          <Image
+            src={Rodolfo}
+            alt="Picture of Rodolfo Vieira. An white man with dark brown short hair, smiling and wearing a blue shirt."
+            width={480}
+            height={599}
+            layout="fixed"
+          />
+        </div>
 
-        <h2>Control & Automation Eng. and Software Developer</h2>
-        <p>
-          Inspired by tech, I'm eager to make a huge contribution to make the
-          world a better place.
-        </p>
-      </main>
+        <div>
+          <h1>{`RODOLFO 
+          VIEIRA
+          `}</h1>
+
+          <h2>Control & Automation Eng. and Software Developer</h2>
+          <p>
+            Inspired by tech, I&apos;m eager to make a huge contribution to make
+            the world a better place.
+          </p>
+        </div>
+      </Main>
+      <CompaniesBar />
 
       {/* To Do: Add Footer */}
     </Container>
